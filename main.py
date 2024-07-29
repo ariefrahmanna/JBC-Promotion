@@ -1,18 +1,16 @@
+import os
 from send import automateWA
 
 
-# Sesuaikan path dari file anda
-WA_path = r"C:\Users\ipung\Downloads\JBC_Promotion\JBC_Promotion\WA.txt"
-caption_path = r"C:\Users\ipung\Downloads\JBC_Promotion\JBC_Promotion\caption.txt"
-image_path = r"C:\Users\ipung\Downloads\JBC_Promotion\JBC_Promotion\image.png"
-
+START = 0
+END = 2
 # Sesuaikan jumlah nomor yang ingin anda kirim terlebih dahulu
 # Jika ingin mengirim semua sekaligus di isikan dengan "ALL"
 # Jika ingin beberapa saja isikan dengan angka, dengan contoh seperti dibawah ini
-# start = 0
-# end = 10
 
-start = 0
-end = 2
+# Sesuaikan path dari file anda
+caption_path = os.path.join(os.getcwd(), "caption.txt")
+image_path = os.path.join(os.getcwd(), "image.png")
+WA_path = os.path.join(os.getcwd(), "WA.txt")
 
-automateWA(start, end, image_path, caption_path, WA_path)
+automateWA(START, END, image_path, caption_path, WA_path)
